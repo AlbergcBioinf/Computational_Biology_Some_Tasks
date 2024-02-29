@@ -1,0 +1,72 @@
+locus_tag	ftype	length_bp	gene	EC_number	COG	product
+OAKGJLPG_00001	CDS	2463	thrA		COG0460	Bifunctional aspartokinase/homoserine dehydrogenase 1
+OAKGJLPG_00002	CDS	933	thrB	2.7.1.39	COG0083	Homoserine kinase
+OAKGJLPG_00003	CDS	1287	thrC	4.2.3.1	COG0498	Threonine synthase
+OAKGJLPG_00004	CDS	297				hypothetical protein
+OAKGJLPG_00005	CDS	777	yaaA		COG3022	Peroxide stress resistance protein YaaA
+OAKGJLPG_00006	CDS	369	alsT_1		COG1115	Amino-acid carrier protein AlsT
+OAKGJLPG_00007	CDS	1041	alsT_2		COG1115	Amino-acid carrier protein AlsT
+OAKGJLPG_00008	CDS	954	talB	2.2.1.2	COG0176	Transaldolase B
+OAKGJLPG_00009	CDS	588	mog	2.7.7.75	COG0521	Molybdopterin adenylyltransferase
+OAKGJLPG_00010	CDS	567	satP		COG1584	Succinate-acetate/proton symporter SatP
+OAKGJLPG_00011	CDS	714				hypothetical protein
+OAKGJLPG_00012	CDS	405				hypothetical protein
+OAKGJLPG_00013	CDS	1917	dnaK		COG0443	Chaperone protein DnaK
+OAKGJLPG_00014	CDS	1131	dnaJ		COG0484	Chaperone protein DnaJ
+OAKGJLPG_00015	CDS	210				hypothetical protein
+OAKGJLPG_00016	CDS	1167	nhaA		COG3004	Na(+)/H(+) antiporter NhaA
+OAKGJLPG_00017	CDS	900	nhaR		COG0583	Transcriptional activator protein NhaR
+OAKGJLPG_00018	CDS	294			COG1662	IS1 family transposase IS1X2
+OAKGJLPG_00019	CDS	264	rpsT		COG0268	30S ribosomal protein S20
+OAKGJLPG_00020	CDS	942	ribF		COG0196	Bifunctional riboflavin kinase/FMN adenylyltransferase
+OAKGJLPG_00021	CDS	2817	ileS	6.1.1.5	COG0060	Isoleucine--tRNA ligase
+OAKGJLPG_00022	CDS	495	lspA	3.4.23.36	COG0597	Lipoprotein signal peptidase
+OAKGJLPG_00023	CDS	177				hypothetical protein
+OAKGJLPG_00024	CDS	450	fkpB_1	5.2.1.8	COG1047	FKBP-type 16 kDa peptidyl-prolyl cis-trans isomerase
+OAKGJLPG_00025	CDS	450	fkpB_2	5.2.1.8	COG1047	FKBP-type 16 kDa peptidyl-prolyl cis-trans isomerase
+OAKGJLPG_00026	CDS	951	ispH	1.17.7.4	COG0761	4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+OAKGJLPG_00027	CDS	915	rihC	3.2.-.-	COG1957	Non-specific ribonucleoside hydrolase RihC
+OAKGJLPG_00028	CDS	822	dapB	1.17.1.8	COG0289	4-hydroxy-tetrahydrodipicolinate reductase
+OAKGJLPG_00029	CDS	1149	carA	6.3.5.5	COG0505	Carbamoyl-phosphate synthase small chain
+OAKGJLPG_00030	CDS	3222	carB	6.3.5.5	COG0458	Carbamoyl-phosphate synthase large chain
+OAKGJLPG_00031	CDS	396				hypothetical protein
+OAKGJLPG_00032	CDS	591	yrdA		COG0663	Protein YrdA
+OAKGJLPG_00033	CDS	786	caiD	4.2.1.149	COG1024	Carnitinyl-CoA dehydratase
+OAKGJLPG_00034	CDS	1554	caiC	6.2.1.48	COG0318	Crotonobetaine/carnitine--CoA ligase
+OAKGJLPG_00035	CDS	1218	caiB	2.8.3.21	COG1804	L-carnitine CoA-transferase
+OAKGJLPG_00036	CDS	1143	caiA	1.3.8.13	COG1960	Crotonobetainyl-CoA reductase
+OAKGJLPG_00037	CDS	1515	caiT		COG1292	L-carnitine/gamma-butyrobetaine antiporter
+OAKGJLPG_00038	CDS	771	fixA		COG2086	Protein FixA
+OAKGJLPG_00039	CDS	792	fixB		COG2025	Protein FixB
+OAKGJLPG_00040	CDS	1287	thi4	2.4.2.59		Thiamine thiazole synthase
+OAKGJLPG_00041	CDS	288	fixX		COG2440	Ferredoxin-like protein FixX
+OAKGJLPG_00042	CDS	1395	ygcS			Inner membrane metabolite transport protein YgcS
+OAKGJLPG_00043	CDS	531	kefF	1.6.5.2	COG2249	Glutathione-regulated potassium-efflux system ancillary protein KefF
+OAKGJLPG_00044	CDS	1863	kefC		COG0475	Glutathione-regulated potassium-efflux system protein KefC
+OAKGJLPG_00045	CDS	480				IS1595 family transposase ISSsu9
+OAKGJLPG_00046	CDS	843	apaH	3.6.1.41	COG0639	Bis(5'-nucleosyl)-tetraphosphatase, symmetrical
+OAKGJLPG_00047	CDS	378	apaG		COG2967	Protein ApaG
+OAKGJLPG_00048	CDS	822	rsmA	2.1.1.182	COG0030	Ribosomal RNA small subunit methyltransferase A
+OAKGJLPG_00049	CDS	990	pdxA	1.1.1.262	COG1995	4-hydroxythreonine-4-phosphate dehydrogenase
+OAKGJLPG_00050	CDS	1287	surA	5.2.1.8	COG0760	Chaperone SurA
+OAKGJLPG_00051	CDS	2355	lptD		COG1452	LPS-assembly protein LptD
+OAKGJLPG_00052	CDS	816	djlA		COG1076	Co-chaperone protein DjlA
+OAKGJLPG_00053	CDS	630	rluA	5.4.99.28	COG0564	Dual-specificity RNA pseudouridine synthase RluA
+OAKGJLPG_00054	CDS	2907	rapA	3.6.4.-	COG0553	RNA polymerase-associated protein RapA
+OAKGJLPG_00055	CDS	2352	polB	2.7.7.7	COG0417	DNA polymerase II
+OAKGJLPG_00056	CDS	696	araD	5.1.3.4	COG0235	L-ribulose-5-phosphate 4-epimerase AraD
+OAKGJLPG_00057	CDS	789	araA_1	5.3.1.4	COG2160	L-arabinose isomerase
+OAKGJLPG_00058	CDS	717	araA_2	5.3.1.4	COG2160	L-arabinose isomerase
+OAKGJLPG_00059	CDS	1701	araB	2.7.1.16	COG1069	Ribulokinase
+OAKGJLPG_00060	CDS	126				hypothetical protein
+OAKGJLPG_00061	CDS	879	araC			Arabinose operon regulatory protein
+OAKGJLPG_00062	CDS	765	yabI		COG0586	Inner membrane protein YabI
+OAKGJLPG_00063	CDS	699	thiQ	3.6.3.-	COG3840	Thiamine import ATP-binding protein ThiQ
+OAKGJLPG_00064	CDS	1611				hypothetical protein
+OAKGJLPG_00065	CDS	984	thiB		COG4143	Thiamine-binding periplasmic protein
+OAKGJLPG_00066	CDS	1656	sgrR		COG4533	HTH-type transcriptional regulator SgrR
+OAKGJLPG_00067	CDS	132	sgrT			Putative inhibitor of glucose uptake transporter SgrT
+OAKGJLPG_00068	CDS	1179	setA			Sugar efflux transporter A
+OAKGJLPG_00069	CDS	606	leuD	4.2.1.33	COG0066	3-isopropylmalate dehydratase small subunit
+OAKGJLPG_00070	CDS	1401	leuC	4.2.1.33	COG0065	3-isopropylmalate dehydratase large subunit
+OAKGJLPG_00071	CDS	1092	leuB	1.1.1.85	COG0473	3-isopropylmalate dehydrogenase

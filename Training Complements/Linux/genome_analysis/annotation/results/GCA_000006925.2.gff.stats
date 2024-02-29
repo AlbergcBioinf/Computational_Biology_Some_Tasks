@@ -1,0 +1,126 @@
+Number of different genome chromosomes annotated: 1
+Number of different feature types annotated: 1
+Number of unique product names: 61
+3-isopropylmalate dehydratase large subunit
+3-isopropylmalate dehydratase small subunit
+3-isopropylmalate dehydrogenase
+30S ribosomal protein S20
+4-hydroxy-3-methylbut-2-enyl diphosphate reductase
+4-hydroxy-tetrahydrodipicolinate reductase
+4-hydroxythreonine-4-phosphate dehydrogenase
+Amino-acid carrier protein AlsT
+Arabinose operon regulatory protein
+Bifunctional aspartokinase/homoserine dehydrogenase 1
+Bifunctional riboflavin kinase/FMN adenylyltransferase
+Bis(5'-nucleosyl)-tetraphosphatase%2C symmetrical
+Carbamoyl-phosphate synthase large chain
+Carbamoyl-phosphate synthase small chain
+Carnitinyl-CoA dehydratase
+Chaperone SurA
+Chaperone protein DnaJ
+Chaperone protein DnaK
+Co-chaperone protein DjlA
+Crotonobetaine/carnitine--CoA ligase
+Crotonobetainyl-CoA reductase
+DNA polymerase II
+Dual-specificity RNA pseudouridine synthase RluA
+FKBP-type 16 kDa peptidyl-prolyl cis-trans isomerase
+Ferredoxin-like protein FixX
+Glutathione-regulated potassium-efflux system ancillary protein KefF
+Glutathione-regulated potassium-efflux system protein KefC
+HTH-type transcriptional regulator SgrR
+Homoserine kinase
+IS1 family transposase IS1X2
+IS1595 family transposase ISSsu9
+Inner membrane metabolite transport protein YgcS
+Inner membrane protein YabI
+Isoleucine--tRNA ligase
+L-arabinose isomerase
+L-carnitine CoA-transferase
+L-carnitine/gamma-butyrobetaine antiporter
+L-ribulose-5-phosphate 4-epimerase AraD
+LPS-assembly protein LptD
+Lipoprotein signal peptidase
+Molybdopterin adenylyltransferase
+Na(+)/H(+) antiporter NhaA
+Non-specific ribonucleoside hydrolase RihC
+Peroxide stress resistance protein YaaA
+Protein ApaG
+Protein FixA
+Protein FixB
+Protein YrdA
+Putative inhibitor of glucose uptake transporter SgrT
+RNA polymerase-associated protein RapA
+Ribosomal RNA small subunit methyltransferase A
+Ribulokinase
+Succinate-acetate/proton symporter SatP
+Sugar efflux transporter A
+Thiamine import ATP-binding protein ThiQ
+Thiamine thiazole synthase
+Thiamine-binding periplasmic protein
+Threonine synthase
+Transaldolase B
+Transcriptional activator protein NhaR
+hypothetical protein
+Number of unique gene names: 61
+alsT_1
+alsT_2
+apaG
+apaH
+araA_1
+araA_2
+araB
+araC
+araD
+caiA
+caiB
+caiC
+caiD
+caiT
+carA
+carB
+dapB
+djlA
+dnaJ
+dnaK
+fixA
+fixB
+fixX
+fkpB_1
+fkpB_2
+ileS
+ispH
+kefC
+kefF
+leuB
+leuC
+leuD
+lptD
+lspA
+mog
+nhaA
+nhaR
+pdxA
+polB
+rapA
+ribF
+rihC
+rluA
+rpsT
+rsmA
+satP
+setA
+sgrR
+sgrT
+surA
+talB
+thi4
+thiB
+thiQ
+thrA
+thrB
+thrC
+yaaA
+yabI
+ygcS
+yrdA
