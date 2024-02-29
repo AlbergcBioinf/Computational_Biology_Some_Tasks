@@ -1,0 +1,76 @@
+IQ-TREE multicore version 2.2.6 COVID-edition for Linux 64-bit built Dec  8 2023
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    gdav (SSE3, 31 GB RAM)
+Command: iqtree -s ../results/AQUIFEX_01761_aligned.fasta -m LG -pre ../results/AQUIFEX_01761_tree --fast
+Seed:    815500 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Jan 29 18:10:20 2024
+Kernel:  SSE2 - 1 threads (16 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file ../results/AQUIFEX_01761_aligned.fasta ... Fasta format detected
+Reading fasta file: done in 0.000830333 secs using 93.82% CPU
+Alignment most likely contains protein sequences
+Constructing alignment: done in 0.00104002 secs using 90.48% CPU
+Alignment has 27 sequences with 375 columns, 356 distinct patterns
+210 parsimony-informative, 96 singleton sites, 69 constant sites
+Analyzing sequences: done in 3.45223e-05 secs using 92.69% CPU
+WARNING: 2 sequences contain more than 50% gaps/ambiguity
+Checking for duplicate sequences: done in 0.000135426 secs using 98.95% CPU
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.00 seconds
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.50)
+1. Initial log-likelihood: -7321.31
+Optimal log-likelihood: -7148.34
+Parameters optimization took 1 rounds (0.06 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.022231 secs using 99.95% CPU
+Computing ML distances took 0.022337 sec (of wall-clock time) 0.022334 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000397845 secs using 160.6% CPU
+Constructing RapidNJ tree: done in 0.00124549 secs using 98.27% CPU
+Computing RapidNJ tree took 0.001868 sec (of wall-clock time) 0.002086 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -7167.147
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+
+Do NNI search on 2 best initial trees
+Optimizing NNI: done in 0.126641 secs using 99.99% CPU
+Estimate model parameters (epsilon = 0.500)
+BETTER TREE FOUND at iteration 1: -7135.615
+Optimizing NNI: done in 0.244518 secs using 97.95% CPU
+Finish initializing candidate tree set (3)
+Current best tree score: -7135.615 / CPU time: 0.408
+Number of iterations: 2
+TREE SEARCH COMPLETED AFTER 2 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.050)
+1. Initial log-likelihood: -7135.615
+Optimal log-likelihood: -7135.615
+Parameters optimization took 1 rounds (0.027 sec)
+BEST SCORE FOUND : -7135.615
+Total tree length: 7.392
+
+Total number of iterations: 2
+CPU time used for tree search: 0.404 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.409 sec (0h:0m:0s)
+Total CPU time used: 0.598 sec (0h:0m:0s)
+Total wall-clock time used: 0.598 sec (0h:0m:0s)
+
+Analysis results written to: 
+  IQ-TREE report:                ../results/AQUIFEX_01761_tree.iqtree
+  Maximum-likelihood tree:       ../results/AQUIFEX_01761_tree.treefile
+  Likelihood distances:          ../results/AQUIFEX_01761_tree.mldist
+  Screen log file:               ../results/AQUIFEX_01761_tree.log
+
+Date and Time: Mon Jan 29 18:10:21 2024

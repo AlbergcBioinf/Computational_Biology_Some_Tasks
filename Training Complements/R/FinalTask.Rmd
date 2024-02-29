@@ -1,0 +1,504 @@
+---
+title: "Exercise_Computational_Biology"
+author: "Alberto González Calatayud"
+date: "2023-09-26"
+output: html_document
+---
+
+## R Markdown
+
+```{r}
+dataset_food <- read.csv('C:/Users/alber/Downloads/food.csv', header=TRUE)
+```
+
+
+
+Selection of 6 food categories to form two groups:
+In both groups, I have tried to choose the categories with the most dishes so that when representing them, the values are not too low.
+
+**First group conditions**:
+RANGE GROUP 1
+6 categories must be selected that meet the following conditions:
+kilocalories [200-300]
+Carbohydrates [9-20]
+Saturated Fat >6
+
+```{r}
+food1 <- dataset_food[(dataset_food$Data.Kilocalories >= 200) &  
+                      (dataset_food$Data.Kilocalories <= 300) &
+                      (dataset_food$Data.Carbohydrate >= 9) &
+                      (dataset_food$Data.Carbohydrate <= 20) & 
+                      (dataset_food$Data.Fat.Saturated.Fat > 6),]
+
+unique(food1$Category)
+```
+
+I look at the categories that meet the conditions and then select six of them.
+These are: "MCDONALD'S", "FAST FOODS", "BURGUER KING", "CHEESE", "OSCAR MAYER", "FAST FDS".
+
+```{r}
+Range_group1 <- food1[(food1$Category == "MCDONALD'S") | 
+                        (food1$Category == "FAST FOODS") |
+                        (food1$Category == "BURGER KING") |
+                        (food1$Category == "CHEESE") |
+                        (food1$Category == "OSCAR MAYER") |
+                        (food1$Category == "FAST FDS"),]
+```
+
+
+**Second group conditions**:
+RANGE GROUP 2
+6 categories must be selected that meet the following conditions:
+kilocalories [200-300]
+Carbohydrates [5-10] ### Saturated Fat
+Saturated Fat <= 6
+
+```{r}
+food2 <- dataset_food[(dataset_food$Data.Kilocalories >= 200) &  
+                      (dataset_food$Data.Kilocalories <= 300) &
+                      (dataset_food$Data.Carbohydrate >= 5) &
+                      (dataset_food$Data.Carbohydrate <= 10) & 
+                      (dataset_food$Data.Fat.Saturated.Fat <= 6),]
+
+unique(food2$Category)
+```
+I look at the categories that meet the conditions and then select six of them.
+These are: "CHICKEN", "KENTUCKY FRIED CHICK", "OLIVE LOAF", "PATE", "VEAL" and "POPEYES".
+
+```{r}
+Range_group2 <- food2[(food2$Category == "CHICKEN") | 
+                        (food2$Category == "KENTUCKY FRIED CHICK") |
+                        (food2$Category == "OLIVE LOAF") |
+                        (food2$Category == "PATE") |
+                        (food2$Category == "VEAL") |
+                        (food2$Category == "POPEYES"),]
+```
+
+Creation of the GROUP categorical variable to identify the categories and then create a single table with the two groups that satisfy the conditions using rbind.
+
+```{r}
+Range_group1$GROUP <- 1
+Range_group2$GROUP <- 2
+Total_table <- rbind(Range_group1, Range_group2)
+```
+
+
+**GRAPHING TIME!!**
+
+**Number of dishes for each group and for each category** 
+To see the number of dishes for each group, I have made a variable for each group by adding all those contained in group 1 and group 2.
+```{r}
+num_dishes_1 <- sum(Total_table$GROUP == "1")
+num_dishes_2 <- sum(Total_table$GROUP == "2")
+print(num_dishes_1)
+print(num_dishes_2)
+```
+The number of dishes for group 1 is 18 and for group 2 is 23.
+
+The number of dishes for each category is: 
+```{r}
+category_dishes <- table(Total_table$Category)
+print(category_dishes)
+```
+BURGER KING     CATFISH      CHEESE     CHICKEN       CREAM    DESSERTS  OLIVE LOAF 
+          1           1           1          10           1           1           1 
+OSCAR MAYER        PATE     POPEYES       SAUCE       SHARK 
+          1           1           1           1           1
+
+
+**Quantity of water that contains the two selected groups**
+
+To observe the amount of water contained in each group we use the function aggregate.
+I have used the aggregate function to group and sum the values of the "Data.Water" column in the "Total_table" data frame according to the unique levels in the "GROUP" column.
+
+```{r}
+quantityof_water <- aggregate(Total_table$Data.Water ~ Total_table$GROUP, data = Total_table, FUN = sum)
+print(quantityof_water)
+```
+I graphically represent the amount of water contained in the foods of each food group using a barplot with basics in R, ggplot and plotly:
+
+**With basics in R**
+```{r}
+barplot(quantityof_water$`Total_table$Data.Water`, names.arg = quantityof_water$`Total_table$GROUP`,
+        col = c("blue", "green"), main = "Water Quantity by Group",
+        xlab = "Group", ylab = "Water Quantity")
+
+```
+**With ggplot**
+```{r}
+library(ggplot2)
+
+ggplot(quantityof_water, aes(x = factor(`Total_table$GROUP`), y = `Total_table$Data.Water`)) +
+  geom_bar(stat = "identity", fill = c("blue", "green"), width = 0.5) +
+  labs(title = "Water Quantity by Group", x = "Group", y = "Water Quantity")
+
+```
+**With plotly**
+
+```{r}
+library(plotly)
+
+plot_ly(data = quantityof_water, x = ~`Total_table$GROUP`, y = ~`Total_table$Data.Water`, type = "bar",
+  marker = list(color = c("blue", "green")),
+  name = "Water Quantity") %>% 
+  layout(title = "Water Quantity by Group", xaxis = list(title = "Group"), yaxis = list(title = "Water Quantity",
+  range = c(0, 1250))
+  )
+
+```
+
+
+A higher amount of water is observed in group 2 foods, which is to be expected as they are slightly healthier foods.
+
+**Fiber that contain the two selected groups**
+I have used the same function (aggregate) as in the previous case and then plotted the graphs using the three libraries.
+
+```{r}
+quantity_of_Fiber <- aggregate(Total_table$Data.Fiber ~ Total_table$GROUP, data = Total_table, FUN = sum)
+print(quantity_of_Fiber)
+```
+
+```{r}
+barplot(quantity_of_Fiber$`Total_table$Data.Fiber`, names.arg = quantity_of_Fiber$`Total_table$GROUP`,
+        col = c("red", "yellow"), main = "Fiber Quantity by Group",
+        xlab = "Group", ylab = "Fier Quantity")
+```
+
+
+```{r}
+
+ggplot(quantity_of_Fiber, aes(x = factor(`Total_table$GROUP`), y = `Total_table$Data.Fiber`)) +
+  geom_bar(stat = "identity", fill = c("red", "yellow"), width = 0.5) +
+  labs(title = "Fiber Quantity by Group", x = "Group", y = "Fiber Quantity")
+
+```
+In this case, to plot the graph using plotly I created an interactive bar chart from the ggplot.
+I stored the graph in "ggplot2" in an object called p_fiber and with 'plotly::ggplotly(p)' I converted the graph from "ggplot2" to a "plotly" graph.
+
+```{r}
+p_fiber <- ggplot(quantity_of_Fiber, aes(x = factor(`Total_table$GROUP`), y = `Total_table$Data.Fiber`)) +
+  geom_bar(stat = "identity", fill = c("red", "yellow"), width = 0.5) +
+  labs(title = "Fiber Quantity by Group", x = "Group", y = "Fiber Quantity")
+
+plotly::ggplotly(p_fiber)
+```
+
+We can observe that the amount of fiber is very similar in the foods of the two groups, this may be due to the foods selected in group 2, as there are three categories which are "CHICKEN", "KENTUCKY FRIED CHICK" and "POPEYES" that meet the conditions to enter group 2, but they are foods whose nutritional value is closer to those of group 1 as they come from fast food chains. 
+
+A higher fiber content is associated with foods of plant origin, so that a greater difference would be observed if in any of the two groups there were mostly foods of plant origin.
+
+**Protein that contains the two selected groups**
+
+I have used the same function (aggregate) as in the previous case and then plotted the graphs using the three libraries.
+
+```{r}
+quantity_of_Protein <- aggregate(Total_table$Data.Protein ~ Total_table$GROUP, data = Total_table, FUN = sum)
+print(quantity_of_Protein)
+```
+
+```{r}
+barplot(quantity_of_Protein$`Total_table$Data.Protein`, names.arg = quantity_of_Fiber$`Total_table$GROUP`,
+        col = c("orange", "cyan"), main = "Protein Quantity by Group",
+        xlab = "Group", ylab = "Protein Quantity")
+```
+
+```{r}
+
+p_protein <- ggplot(quantity_of_Protein, aes(x = factor(`Total_table$GROUP`), y = `Total_table$Data.Protein`)) +
+  geom_bar(stat = "identity", fill = c("orange", "cyan"), width = 0.5) +
+  labs(title = "Protein Quantity by Group", x = "Group", y = "Protein Quantity")
+print(p_protein)
+```
+
+```{r}
+plotly::ggplotly(p_protein)
+```
+
+In group 2 a higher protein load is observed than in group 1, as in group 1 the food is mostly of lower nutritional quality.
+In group 2 we have "CHICKEN", "PATE" and "VEAL" which are foods with high protein content.
+
+**Total sugars that contain the two selected groups**
+
+I have used the same function (aggregate) as in the previous case and then plotted the graphs using the three libraries.
+
+```{r}
+quantity_of_sugar <- aggregate(Total_table$Data.Sugar.Total~ Total_table$GROUP, data = Total_table, FUN = sum)
+print(quantity_of_sugar)
+```
+
+
+```{r}
+barplot(quantity_of_sugar$`Total_table$Data.Sugar.Total`, names.arg = quantity_of_sugar$`Total_table$GROUP`,
+        col = c("blue", "red"), main = "Total Sugar Quantity by Group",
+        xlab = "Group", ylab = "Total sugar Quantity")
+```
+
+```{r}
+
+ggplot(quantity_of_sugar, aes(x = factor(`Total_table$GROUP`), y = `Total_table$Data.Sugar.Total`)) +
+  geom_bar(stat = "identity", fill = c("blue", "red"), width = 0.5) +
+  labs(title = "Sugar Quantity by Group", x = "Group", y = "Sugar Quantity")
+
+```
+
+```{r}
+p_sugar <- ggplot(quantity_of_sugar, aes(x = factor(`Total_table$GROUP`), y = `Total_table$Data.Sugar.Total`)) +
+  geom_bar(stat = "identity", fill = c("blue", "red"), width = 0.5) +
+  labs(title = "Sugar Quantity by Group", x = "Group", y = "Sugar Quantity")
+
+plotly::ggplotly(p_sugar)
+```
+
+There is a large difference in the total amount of sugars between the two groups. Foods in group 1, which are mostly processed, contain a higher amount of sugars than foods in group 2, where we find some healthier foods such as CHICKEN and VEAL, PATE and OLIVE LOAF.
+
+**For each group and category, plot the differences among them in Cholesterol**
+
+To compare the differences in cholesterol between the two groups, I have made a boxplot as it allows us to observe the dispersion of the data.
+
+**GROUP 1**
+
+```{r}
+boxplot(Range_group1$Data.Cholesterol ~Range_group1$Category, col=c("red","blue","orange","cyan","yellow","green"))
+```
+
+```{r}
+ggplot(Range_group1, aes(x = Category, y = Data.Cholesterol, fill = Category)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("red", "blue", "green", "purple", "orange", "pink")) +
+  labs(title = "Boxplot of Cholesterol Data by Category",
+       x = "Category", y = "Cholesterol")
+```
+
+```{r}
+plot_ly(data = Range_group1, x = ~Category, y = ~Data.Cholesterol, type = "box", color = ~Category) %>%
+  layout(title = "Boxplot of Cholesterol Data by Category",
+         xaxis = list(title = "Category"),
+         yaxis = list(title = "Cholesterol Data"))
+```
+
+We can observe a clear predominance of cholesterol in foods from MCDONALD'S, which reach a maximum of up to 173. 
+OSCAR MAYER also contains high cholesterol content.
+
+**GROUP 2**
+
+```{r}
+boxplot(Range_group2$Data.Cholesterol ~Range_group2$Category, col=c("red","blue","yellow","cyan","green","orange"))
+```
+```{r}
+ggplot(Range_group2, aes(x = Category, y = Data.Cholesterol, fill = Category)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("red", "blue", "green", "purple", "orange", "pink")) +
+  labs(title = "Boxplot of Cholesterol Data by Category (Range_group2)",
+       x = "Category", y = "Cholesterol Data")
+```
+
+```{r}
+plot_ly(data = Range_group2, x = ~Category, y = ~Data.Cholesterol, type = "box", color = ~Category) %>%
+  layout(title = "Boxplot of Cholesterol Data by Category (Range_group2)",
+         xaxis = list(title = "Category"),
+         yaxis = list(title = "Cholesterol Data"))
+```
+
+We note that most of the foods maintain similar cholesterol levels, while "PATE" contains the maximum amount in this study, close to 400.  
+
+**Check relationship between the water content and the Kilocalories in both groups and plot it**
+
+To check the relationship between two variables, correlation is a statistical parameter that tells us whether there is a linear relationship between two variables and the direction of that relationship (positive or negative).
+
+The correlation value will be a number between -1 and 1. A positive value close to 1 would indicate a positive correlation (as one variable increases, the other also tends to increase), while a negative value close to -1 would indicate a negative correlation (as one variable increases, the other tends to decrease). A value close to 0 would indicate a weak or zero correlation.
+
+```{r}
+correlation <- cor(Total_table$Data.Water, Total_table$Data.Kilocalories)
+print(correlation)
+```
+You can say that there is a strong negative correlation (-0.8203376) between the amount of water and the kilocalories in food. This indicates that, as the amount of water in food increases, the kilocalories tend to decrease significantly. This observation suggests that foods with higher water content are likely to be lower in calories, which could be relevant for health and planning a balanced diet.
+
+```{r}
+plot(Total_table$Data.Water, 
+     Total_table$Data.Kilocalories,
+     pch=16,
+     col="blue",
+     xlab= "Water content",
+     ylab="Kilocalories")
+```
+With ggplot2
+
+```{r}
+library (ggplot2)
+
+ggplot(Total_table, mapping= aes(x=Data.Kilocalories, y=Data.Water))+
+  geom_point()
+```
+```{r}
+plot_ly(x = ~Total_table$Data.Water, y = ~Total_table$Data.Kilocalories,
+  type = "scatter",
+  mode = "markers",
+  marker = list(color = "green", symbol = 16),
+  xaxis = "x",
+  yaxis = "y") %>%
+  layout(xaxis = list(title = "Water content"), yaxis = list(title = "Kilocalories")
+  )
+
+```
+We can corroborate the calculated correlation by looking at the scatter plots.
+
+**Check relationship between the water content and the Fiber in both groups and plot it**
+
+```{r}
+correlation <- cor(Total_table$Data.Water, Total_table$Data.Fiber)
+print(correlation)
+```
+There is a very weak positive correlation (0.02990031) between water content and fibre in the food. This indicates that, in general, there is no strong relationship between these two components in the sample analysed. The correlation close to zero suggests that water content and fibre in foods are not strongly related to each other. 
+It is important to consider other variables and factors when assessing the composition of these foods.
+
+```{r}
+plot(Total_table$Data.Fiber, 
+     Total_table$Data.Water,
+     pch=16,
+     col="orange",
+     xlab= "Water",
+     ylab="Fiber")
+```
+
+
+```{r}
+ggplot(Total_table, mapping= aes(x=Data.Fiber, y=Data.Water))+
+  geom_point(color="orange")
+```
+
+
+```{r}
+plot_ly(x = ~Total_table$Data.Fiber, y = ~Total_table$Data.Water,
+  type = "scatter",
+  mode = "markers",
+  marker = list(color = "orange", symbol = 16),
+  xaxis = "x",
+  yaxis = "y") %>%
+  layout(xaxis = list(title = "Fiber"), yaxis = list(title = "Water content")
+  )
+```
+
+
+**Check relationship between the fiber and the Kilocalories in both groups and plot it**
+
+```{r}
+correlation <- cor(Total_table$Data.Fiber, Total_table$Data.Kilocalories)
+print(correlation)
+```
+There is a negative, but relatively weak correlation (-0.1029691) between fiber content and kilocalories in foods. This suggests that, in general, foods with more fibre tend to have fewer kilocalories, although the relationship is not strong. Therefore, other factors may also influence the amount of kilocalories in foods, and further analysis is needed to fully understand this relationship.
+
+```{r}
+plot(Total_table$Data.Fiber, 
+     Total_table$Data.Kilocalories,
+     pch=16,
+     xlab= "Fiber", 
+     ylab="Kilocalories")
+```
+```{r}
+ggplot(Total_table, mapping= aes(x=Data.Fiber, y=Data.Kilocalories))+
+  geom_point()
+```
+
+```{r}
+plot_ly(x = ~Total_table$Data.Fiber, y = ~Total_table$Data.Kilocalories,
+  type = "scatter",
+  mode = "markers",
+  xaxis = "x",
+  yaxis = "y") %>%
+  layout(xaxis = list(title = "Fiber"), yaxis = list(title = "Water content")
+  )
+```
+
+
+**Find the most presented mineral in the group 1 and compare with the amount of this mineral in the group 2**
+
+First, we need to check the most present mineral in group 1.
+
+I calculate the average separately for the different minerals in group 1. Then I created a new data frame called 'total_mineral' which has the column Mineral (with the names of the minerals) and the column Total_sum (with the averages calculated in the first step).
+
+```{r}
+sum_mineral1 <- mean(Range_group1$Data.Major.Minerals.Calcium)
+sum_mineral2 <- mean(Range_group1$Data.Major.Minerals.Copper)
+sum_mineral3 <- mean(Range_group1$Data.Major.Minerals.Iron)
+sum_mineral4 <- mean(Range_group1$Data.Major.Minerals.Magnesium)
+sum_mineral5 <- mean(Range_group1$Data.Major.Minerals.Phosphorus)
+sum_mineral6 <- mean(Range_group1$Data.Major.Minerals.Potassium)
+sum_mineral7 <- mean(Range_group1$Data.Major.Minerals.Sodium)
+sum_mineral8 <- mean(Range_group1$Data.Major.Minerals.Zinc)
+
+total_mineral <- data.frame(Mineral = c("Calcium", "Copper", "Iron", "Magnesium", "Phosphorus", "Potassium", "Sodium", "Zinc"),
+                            Total_sum = c(sum_mineral1, sum_mineral2, sum_mineral3,
+                                           sum_mineral4, sum_mineral5, sum_mineral6,
+                                           sum_mineral7, sum_mineral8))
+
+```
+
+Now, I have plotted the data in a bar chart to see which mineral is most present.
+
+```{r}
+ggplot(total_mineral, aes(x = Mineral, y = Total_sum, fill = Mineral)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Total Minerals",
+       x = "Mineral",
+       y = "Total sum") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r}
+colours <- c("red", "blue", "green", "orange", "purple", "pink", "cyan", "magenta")
+
+plot_ly(data = total_mineral, x = ~Mineral, y = ~Total_sum, type = "bar", marker = list(color = colours)) %>%
+  layout(title = "Total Minerals",
+         xaxis = list(title = "Mineral", tickangle = 50),
+         yaxis = list(title = "Total sum", c(0, max(total_mineral$Total_sum) + 50)),
+         showlegend = FALSE)
+```
+
+In the graph, we can see that sodium is the most abundant mineral in group 1. Therefore I compare it with the amount of sodium in group 2 using a t.test to compare the means of two groups and determine whether there are significant differences between them:
+
+
+```{r}
+t.test(Range_group1$Data.Major.Minerals.Sodium, Range_group2$Data.Major.Minerals.Sodium)
+```
+The t-test result for the amount of sodium in two groups shows that, on average, the first group has a slightly higher amount of sodium than the second group, although this difference is not statistically significant (p = 0.1581).
+
+**Find the most presented Vitamin in the group 1 and compare with the amount of this mineral in the group 1**
+
+```{r}
+sum_vitamin1 <- mean(Range_group1$Data.Vitamins.Vitamin.A...IU)
+sum_vitamin2 <- mean(Range_group1$Data.Vitamins.Vitamin.A...RAE)
+sum_vitamin3 <- mean(Range_group1$Data.Vitamins.Vitamin.B12)
+sum_vitamin4 <- mean(Range_group1$Data.Vitamins.Vitamin.B6)
+sum_vitamin5 <- mean(Range_group1$Data.Vitamins.Vitamin.C)
+sum_vitamin6 <- mean(Range_group1$Data.Vitamins.Vitamin.E)
+sum_vitamin7 <- mean(Range_group1$Data.Vitamins.Vitamin.K)
+
+total_vitamin <- data.frame(Vitamin = c("AIU", "ARAE", "B12", "B6", "C", "E", "K"),
+                            Total_sum = c(sum_vitamin1, sum_vitamin2, sum_vitamin3,
+                                           sum_vitamin4, sum_vitamin5, sum_vitamin6,
+                                           sum_vitamin7))
+```
+
+```{r}
+ggplot(total_vitamin, aes(x = Vitamin, y = Total_sum, fill = Vitamin)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Total Vitamin", x = "Mineral", y = "Total sum")
+```
+```{r}
+t.test(Range_group1$Data.Vitamins.Vitamin.A...IU, Range_group2$Data.Vitamins.Vitamin.A...IU)
+```
+```{r}
+vitamin_colours <- c("red", "blue", "green", "orange", "purple", "pink", "cyan")
+
+plot_ly(data = total_vitamin, x = ~Vitamin, y = ~Total_sum, type = "bar", marker = list(color = vitamin_colours)) %>%
+  layout(title = "Total Vitamin",
+         xaxis = list(title = "Vitamin", tickangle = 45),
+         yaxis = list(title = "Total sum", range = c(0, max(total_vitamin$Total_sum) + 50)),
+         showlegend = FALSE)
+```
+
+The first group has a slightly higher average than the second group, but the difference is not statistically significant (p = 0.07542). The wide confidence interval indicates uncertainty in the actual difference.
+
+

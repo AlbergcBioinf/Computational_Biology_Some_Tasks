@@ -1,0 +1,6 @@
+# git tag version 3.1.0 |  motus version 3.1.0 | map_tax 3.1.0 | gene database: nr3.1.0 | calc_mgc 3.1.0 -y insert.scaled_counts -l 75 | calc_motu 3.1.0 -k mOTU -C no_CAMI -g 4 | taxonomy: ref_mOTU_3.1.0 meta_mOTU_3.1.0
+# call: python /home/miniforge3/envs/gdav23/bin/motus profile -f data/metagenomics-hotspring-hightemp.1.fq.gz -r data/metagenomics-hotspring-hightemp.2.fq.gz -g 4 -o results/high_mOTUs44
+#consensus_taxonomy	unnamed sample
+Methanococcus maripaludis [ref_mOTU_v31_01426]	0.0842476155
+Aquifex aeolicus [ref_mOTU_v31_10705]	0.9154098245
+unassigned	0.0003425600
