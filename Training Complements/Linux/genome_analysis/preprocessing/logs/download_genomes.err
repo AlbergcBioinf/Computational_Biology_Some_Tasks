@@ -1,0 +1,81 @@
+./download_genomes.sh: line 28: read: read error: 0: Is a directory
+./download_genomes.sh: fork: retry: No child processes
+./download_genomes.sh: fork: retry: No child processes
+./download_genomes.sh: fork: retry: No child processes
+./download_genomes.sh: fork: retry: No child processes
+./download_genomes.sh: fork: Resource temporarily unavailable
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2430    0  2430    0     0   2339      0 --:--:--  0:00:01 --:--:--  2341100 1350k    0 1350k    0     0   754k      0 --:--:--  0:00:01 --:--:--  754k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  630k    0  630k    0     0   514k      0 --:--:--  0:00:01 --:--:--  514k100 1629k    0 1629k    0     0  1204k      0 --:--:--  0:00:01 --:--:-- 1204k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 16406    0 16406    0     0  19352      0 --:--:-- --:--:-- --:--:-- 19346100  593k    0  593k    0     0   456k      0 --:--:--  0:00:01 --:--:--  456k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2125    0  2125    0     0   3692      0 --:--:-- --:--:-- --:--:--  3689100 1393k    0 1393k    0     0  1103k      0 --:--:--  0:00:01 --:--:-- 1104k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  680k    0  680k    0     0   556k      0 --:--:--  0:00:01 --:--:--  556k100 1440k    0 1440k    0     0  1074k      0 --:--:--  0:00:01 --:--:-- 1074k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2137    0  2137    0     0   1926      0 --:--:--  0:00:01 --:--:--  1928100  804k    0  804k    0     0   471k      0 --:--:--  0:00:01 --:--:--  471k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  850k    0  850k    0     0   746k      0 --:--:--  0:00:01 --:--:--  746k100 1131k    0 1131k    0     0   910k      0 --:--:--  0:00:01 --:--:--  909k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 16568    0 16568    0     0  20069      0 --:--:-- --:--:-- --:--:-- 20058100 1643k    0 1643k    0     0  1166k      0 --:--:--  0:00:01 --:--:-- 1166k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  305k    0  305k    0     0   300k      0 --:--:--  0:00:01 --:--:--  300k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  852k    0  852k    0     0   681k      0 --:--:--  0:00:01 --:--:--  681k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  265k    0  265k    0     0   252k      0 --:--:--  0:00:01 --:--:--  252k100 1120k    0 1120k    0     0   878k      0 --:--:--  0:00:01 --:--:--  877k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 63470    0 63470    0     0  79481      0 --:--:-- --:--:-- --:--:-- 79436100 1222k    0 1222k    0     0   979k      0 --:--:--  0:00:01 --:--:--  979k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  465k    0  465k    0     0   307k      0 --:--:--  0:00:01 --:--:--  307k100 1250k    0 1250k    0     0   762k      0 --:--:--  0:00:01 --:--:--  762k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 88739    0 88739    0     0   111k      0 --:--:-- --:--:-- --:--:--  111k100  458k    0  458k    0     0   414k      0 --:--:--  0:00:01 --:--:--  414k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 10937    0 10937    0     0  17311      0 --:--:-- --:--:-- --:--:-- 17305100 1748k    0 1748k    0     0  1299k      0 --:--:--  0:00:01 --:--:-- 1300k
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.
+unzip:  cannot find or open /home/2023/intro/alberto.gcalatayud/genome_analysis/p$, /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.zip or /home/2023/intro/alberto.gcalatayud/genome_analysis/p$.ZIP.

@@ -1,0 +1,16 @@
+#Assembly	BioSample	BioProject	Level	Size(Mb)	Organism Name	Organism Groups	Strain	num_seqs	fasta_path
+GCA_000240185.2	SAMN02602959	PRJNA78789	Complete	5.68232	Klebsiella pneumoniae subsp. pneumoniae HS11286	Bacteria;Pseudomonadota;Gammaproteobacteria	HS11286	7	GCA_000240185.2_ASM24018v2_genomic.fna
+GCA_000196035.1	SAMEA3138329	PRJNA276	Complete	2.94453	Listeria monocytogenes EGD-e	Bacteria;Terrabacteria group;Bacillota	EGD-e	1	GCA_000196035.1_ASM19603v1_genomic.fna
+GCA_000195955.2	SAMEA3138326	PRJNA224	Complete	4.41153	Mycobacterium tuberculosis H37Rv	Bacteria;Terrabacteria group;Actinomycetota	H37Rv	1	GCA_000195955.2_ASM19595v2_genomic.fna
+GCA_000191145.1	SAMN02603040	PRJNA51267	Complete	3.86253	Acinetobacter pittii PHEA-2	Bacteria;Pseudomonadota;Gammaproteobacteria	PHEA-2	1	GCA_000191145.1_ASM19114v1_genomic.fna
+GCA_000022005.1	SAMN02604151	PRJNA32027	Complete	4.04293	Caulobacter vibrioides NA1000	Bacteria;Pseudomonadota;Alphaproteobacteria	NA1000	1	GCA_000022005.1_ASM2200v1_genomic.fna
+GCA_000013425.1	SAMN02604235	PRJNA237	Complete	2.82136	Staphylococcus aureus subsp. aureus NCTC 8325	Bacteria;Terrabacteria group;Bacillota	NCTC 8325	1	GCA_000013425.1_ASM1342v1_genomic.fna
+GCA_000009085.1	SAMEA1705929	PRJNA8	Complete	1.64148	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819	Bacteria;Campylobacterota;Epsilonproteobacteria	NCTC 11168	1	GCA_000009085.1_ASM908v1_genomic.fna
+GCA_000009045.1	SAMEA3138188	PRJNA76	Complete	4.21561	Bacillus subtilis subsp. subtilis str. 168	Bacteria;Terrabacteria group;Bacillota	168	1	GCA_000009045.1_ASM904v1_genomic.fna
+GCA_000008865.2	SAMN01911278	PRJNA226	Complete	5.5946	Escherichia coli O157:H7 str. Sakai	Bacteria;Pseudomonadota;Gammaproteobacteria	Sakai substr. RIMD 0509952	3	GCA_000008865.2_ASM886v2_genomic.fna
+GCA_000008725.1	SAMN02603114	PRJNA45	Complete	1.04252	Chlamydia trachomatis D/UW-3/CX	Bacteria;PVC group;Chlamydiota	D/UW-3/CX	1	GCA_000008725.1_ASM872v1_genomic.fna
+GCA_000007765.2	SAMN02603970	PRJNA41	Complete	2.03281	Coxiella burnetii RSA 493	Bacteria;Pseudomonadota;Gammaproteobacteria	RSA 493	2	GCA_000007765.2_ASM776v2_genomic.fna
+GCA_000006945.2	SAMN02604315	PRJNA241	Complete	4.95138	Salmonella enterica subsp. enterica serovar Typhimurium str. LT2	Bacteria;Pseudomonadota;Gammaproteobacteria	LT2	2	GCA_000006945.2_ASM694v2_genomic.fna
+GCA_000006925.2	SAMN02603599	PRJNA310	Complete	4.82882	Shigella flexneri 2a str. 301	Bacteria;Pseudomonadota;Gammaproteobacteria	301	2	GCA_000006925.2_ASM692v2_genomic.fna
+GCA_000006765.1	SAMN02603714	PRJNA331	Complete	6.2644	Pseudomonas aeruginosa PAO1	Bacteria;Pseudomonadota;Gammaproteobacteria	PAO1	1	GCA_000006765.1_ASM676v1_genomic.fna
+GCA_000005845.2	SAMN02604091	PRJNA225	Complete	4.64165	Escherichia coli str. K-12 substr. MG1655	Bacteria;Pseudomonadota;Gammaproteobacteria	K-12 substr. MG1655	1	GCA_000005845.2_ASM584v2_genomic.fna
