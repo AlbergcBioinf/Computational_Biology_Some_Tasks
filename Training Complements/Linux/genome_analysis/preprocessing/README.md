@@ -27,9 +27,9 @@ The assemblies_taxa.tsv file will be in the results directory.
 ## Assemblies.list
 Create a file with a single column in which each row contains an assembly ID 
 and is stored in /results/assemblies.list and run this bash command:
-
+```bash
 cut -f 1 data/assemblies.tsv | tail -n +2 > results/assemblies.list
-
+```
 
 ######
 ##Script Download_genomes.sh:
@@ -42,8 +42,9 @@ This script does the following:
 
 #Run the script:
 Run the download_genomes.sh script, providing the assemblies.list file as an argument:
+```bash
 ./download_genomes.sh /home/2023/intro/alberto.gcalatayud/genome_analysis/preprocessing/results/assemblies.list >> ../logs/download_genomes.out 2>> ../logs/download_genomes.err
-
+```
 The genomes shall be downloaded and stored in the results directory. Output messages shall be logged in logs/download_genomes.out, and error messages in logs/download_genomes.err.
 
 
@@ -73,8 +74,9 @@ other important files such as the `README` and files starting with "assemblies".
 
 We use the `find` command to search for directories beginning with `GCA` in the `results` folder, but specifically exclude the `.fna` files, 
 
-````bash
+```bash
 find results -type d -name "GCA*" ! -name "*.fna" ! -name "README.md" ! -name "assemblies*" -exec rm -r {} {} -exec rm -r {} -exec rm -r {} -exec rm -r {};
+```
 
 #####
 ### Script paths_count_seqs.sh 
@@ -92,7 +94,9 @@ It performs the following actions:
 Results are stored in results/assemblies_paths_count.tsv, and error messages are logged in logs/paths_count_seqs.err.
 
 ## To run the script:
+```bash
 ./scripts/paths_count_seqs.sh > results/assemblies_paths_count.tsv 2> logs/paths_count_seqs.err
+```
 
 ## Generate table assemblies_data.tsv
 
@@ -106,7 +110,9 @@ I have created this script in order to put the header to each column of the asse
 This way I put them by hand to generate the assemblies_data.tsv table in the results directory.
 
 To run the script from preprocessing:
+```bash
 ./results/merge_tables2.sh 
+```
 
 Once the new table has been generated and "assemblies_data.tsv" has been checked, 
 the previous tables have been deleted from the terminal in the results directory:
