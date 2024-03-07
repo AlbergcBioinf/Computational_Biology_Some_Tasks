@@ -13,10 +13,10 @@
 - [scripts](scripts/): Contains analysis scripts.
 
 
-## Annotation
-
-annotation: see Annotation in [annotation](./annotation/README.md) to get more details.
-
+## Annotation Dir**: See Annotation in [annotation](./annotation/README.md) to get more details.
+- [data](data/): Contains input data files.
+- [logs](logs/): Stores log files.
+- [results](results/): Stores analysis results.
 
 ## Assembly_ID
 The BioProject I have been assigned to annotate is PJRNA310.
