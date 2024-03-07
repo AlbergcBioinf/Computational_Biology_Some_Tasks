@@ -49,11 +49,13 @@ To find the highest quality variant in the VCF files:
 ```bash
 bcftools view variant_calls_default_ploidy.vcf.gz | grep -v "^#" | sort -k6 -nr | head -1
 bcftools view variants_sep.vcf.gz | grep -v "^#" | sort -k6 -nr | head -1
+```
 
 ## snps and indels check
 ```bash
 bcftools view -H -v snps file | wc -l
 bcftools view -H -v indels file | wc -l
+```
 
 ## Quality check
 bcftools filter -i “QUAL>100” file.vcf | bcftools view -H | wc -l
@@ -64,13 +66,14 @@ bcftools filter -i "DP>100" file.vcf | bcftools view -H | wc -l
 for sorted in *_sorted.bam; do
 samtools index "$sorted"
 done
+```
 
 ## Comparing Variant Position with Genome Annotations
 To check if the high-quality variant affects any gene:
 
 ```bash
 awk '$1 == "Aquifex_genome" && $4 <= 1265060 && $5 >= 1265060' data/genome.gff
-
+```
 
 The commands and analyses provided a comprehensive understanding of the potential impact of the high-quality variant on the gene nifA, highlighting the importance of integrating genomic data with functional annotations.
 
