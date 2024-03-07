@@ -6,14 +6,14 @@
 
 -**Description**: Preliminary work with RefSeq's reference bacterial genomes
 
-## Preprocessing Dir:** See Preprocessing in [preprocessing](./preprocessing/README.md) to get more details.
+## Preprocessing Dir: See Preprocessing in [preprocessing](./preprocessing/README.md) to get more details.
 - [data](data/): Contains input data files.
 - [logs](logs/): Stores log files.
 - [results](results/): Stores analysis results.
 - [scripts](scripts/): Contains analysis scripts.
 
 
-## Annotation Dir**: See Annotation in [annotation](./annotation/README.md) to get more details.
+## Annotation Dir: See Annotation in [annotation](./annotation/README.md) to get more details.
 - [data](data/): Contains input data files.
 - [logs](logs/): Stores log files.
 - [results](results/): Stores analysis results.
