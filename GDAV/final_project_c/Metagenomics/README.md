@@ -23,6 +23,7 @@ For example, to analyze high-temperature samples with a threshold of 3 and save 
 
 ```bash
 ./scripts/motus.sh high 3 high_mOTUs
+```
 
 ## Data Files
 
